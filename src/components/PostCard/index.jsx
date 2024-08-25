@@ -1,3 +1,4 @@
+import './styles.css';
 export const PostCard = (props) => {
     const { post } = props;
     return (
