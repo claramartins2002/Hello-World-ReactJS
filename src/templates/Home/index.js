@@ -1,4 +1,6 @@
+/* eslint-disable no-extra-boolean-cast */
 import './styles.css';
+import React from 'react';
  import { Component } from 'react';
 import { loadPosts } from '../../utils/load-posts';
 import { Posts } from '../../components/Posts';
@@ -56,7 +58,7 @@ render() {
   }) : posts;
 
   return (
-    
+
     <section className="container">
 
       <div className="search-container">
@@ -68,26 +70,26 @@ render() {
       )}
            <TextInput searchValue={searchValue} handleChange={this.handleChange}/>
       </div>
-     
+
             {filteredPosts.length > 0 && (
                  <Posts posts={filteredPosts}></Posts>
 
             )}
-            
+
             {filteredPosts.length === 0 && (
               <>
               <h1>Post not found =/</h1>
               </>
               )}
 
-   <div className="button-container"> 
+   <div className="button-container">
     {!searchValue && (
  <Button text="load more posts..."
  onClick={this.loadMorePosts}
   disabled={noMorePosts}
  />
-    )} 
-    
+    )}
+
    </div>
     </section>
 
